@@ -195,7 +195,6 @@ const Cart = () => {
                                     src={merchandise.productImage}
                                     className="img-fluid rounded-3"
                                     alt="Cotton T-shirt"
-                                    loading="lazy"
                                   />
                                 </div>
                                 <div className="col-md-3 col-lg-3 col-xl-3">
@@ -206,22 +205,8 @@ const Cart = () => {
                                     {merchandise.productDescription}
                                   </h6>
                                 </div>
-                                <div
-                                  className="col-md-3 col-lg-3 col-xl-2 d-flex"
-                                  style={{
-                                    border: "2px solid black",
-                                    borderRadius: "5px",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                  }}
-                                >
+                                <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                                   <button
-                                    style={{
-                                      border: "none",
-                                      background: "transparent",
-                                      marginRight: "1vw",
-                                      fontWeight: "bolder",
-                                    }}
                                     onClick={() =>
                                       decrementMerchandise(merchandise)
                                     }
@@ -233,19 +218,13 @@ const Cart = () => {
                                     onClick={() =>
                                       incrementMerchandise(merchandise)
                                     }
-                                    style={{
-                                      border: "none",
-                                      background: "transparent",
-                                      marginLeft: "1vw",
-                                      fontWeight: "bolder",
-                                    }}
                                   >
                                     +
                                   </button>
                                 </div>
                                 <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                   <h6 className="mb-0">
-                                    $&nbsp;
+                                    ₹&nbsp;
                                     {merchandise.quantity *
                                       merchandise.productPrice}
                                   </h6>
@@ -259,6 +238,7 @@ const Cart = () => {
                             ))}
                             <hr className="my-4" />
                             <h3 className="fw-bold mb-5 text-black">
+                              {" "}
                               Official Music Album
                             </h3>
                             {cartBandAlbums.map((album) => (
@@ -271,7 +251,6 @@ const Cart = () => {
                                     src={album.albumImage}
                                     className="img-fluid rounded-3"
                                     alt="Cotton T-shirt"
-                                    loading="lazy"
                                   />
                                 </div>
                                 <div className="col-md-3 col-lg-3 col-xl-3">
@@ -282,42 +261,18 @@ const Cart = () => {
                                     {album.albumYear}
                                   </h6>
                                 </div>
-                                <div
-                                  className="col-md-3 col-lg-3 col-xl-2 d-flex"
-                                  style={{
-                                    border: "2px solid black",
-                                    borderRadius: "5px",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                  }}
-                                >
-                                  <button
-                                    style={{
-                                      border: "none",
-                                      background: "transparent",
-                                      marginRight: "1vw",
-                                      fontWeight: "bolder",
-                                    }}
-                                    onClick={() => decrementMusic(album)}
-                                  >
+                                <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                  <button onClick={() => decrementMusic(album)}>
                                     -
                                   </button>
                                   {album.quantity}
-                                  <button
-                                    style={{
-                                      border: "none",
-                                      background: "transparent",
-                                      marginLeft: "1vw",
-                                      fontWeight: "bolder",
-                                    }}
-                                    onClick={() => incrementMusic(album)}
-                                  >
+                                  <button onClick={() => incrementMusic(album)}>
                                     +
                                   </button>
                                 </div>
                                 <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                   <h6 className="mb-0">
-                                    $&nbsp;{album.quantity * album.albumPrice}
+                                    ₹&nbsp;{album.quantity * album.albumPrice}
                                   </h6>
                                 </div>
                                 <div className="col-md-1 col-lg-1 col-xl-1 text-end">
@@ -359,7 +314,7 @@ const Cart = () => {
                             <hr className="my-4" />
                             <div className="d-flex justify-content-between mb-5">
                               <h5 className="text-uppercase">Total amounts</h5>
-                              <h5>$ {totalMerPrice + totalAlbumPrice}</h5>
+                              <h5>₹ {totalMerPrice + totalAlbumPrice}</h5>
                             </div>
                             <hr className="my-4" />
 

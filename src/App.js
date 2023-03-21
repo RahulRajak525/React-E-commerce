@@ -61,9 +61,6 @@ function App() {
   }, [cart]);
 
   useEffect(() => {
-    dispatch(getUserProfileAction());
-  }, []);
-  useEffect(() => {
     if (userData) {
       dispatch(getMerchandiseData(userData.localId));
       dispatch(getAlbumData(userData.localId));

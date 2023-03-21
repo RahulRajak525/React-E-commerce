@@ -27,6 +27,7 @@ export default function SignupPage() {
       password: data.get("password"),
     };
     dispatch(userSignupAction(userCredentials));
+    navigate("/login");
   };
   const loginPageHandler = () => {
     navigate("/login");

@@ -104,7 +104,7 @@ const merchandise = [
     productImage:
       "https://image.spreadshirtmedia.com/image-server/v1/products/T1194A231PA2741PT17X51Y37D1017000247W20831H24997/views/1,width=378,height=378,appearanceId=231,backgroundColor=F2F2F2,modelId=5859,crop=list/war-funk-band-why-can-t-we-be-friends-lowrider-all.jpg",
     productDescription:
-      "Grey pullover hoodie with The Generics name on front and tour dates on back.",
+      "Grey pullover hoodie with The Generics name on front and tour dates on back. Available in sizes S-XXL.",
   },
   {
     id: "003",
@@ -142,8 +142,7 @@ const merchandise = [
     productImage:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCEl0UqsV8li9pKT0l-OZSS6AxVis3sDwHA&usqp=CAU",
     quantity: 0,
-    productDescription:
-      "Metal keychain featuring band name and logo used to secure a bunch of keys.",
+    productDescription: "Metal keychain featuring band name and logo.",
   },
 ];
 

@@ -13,7 +13,7 @@ import { cartActions } from "../reducers/cartSlice";
 const StorePage = () => {
   const dispatch = useDispatch();
   const bandMerchandise = useSelector((state) => state.cart.bandMerchandise);
-  console.log(bandMerchandise);
+  // console.log(bandMerchandise);
   const bandAlbums = useSelector((state) => state.cart.bandAlbums);
   const addMerchandiseToCart = (merchandise) => {
     dispatch(cartActions.addMerchandiseToCart(merchandise));

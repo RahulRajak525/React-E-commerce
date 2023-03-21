@@ -10,7 +10,7 @@ const authSlice = createSlice({
   },
   reducers: {
     userLogout(state, action) {
-      localStorage.removeItem("idToken");
+      localStorage.clear();
       state.userLoginData = undefined;
       state.userProfileData = undefined;
     },
@@ -20,6 +20,7 @@ const authSlice = createSlice({
       const response = action.payload;
       state.userLoginData = response;
       localStorage.setItem("idToken", response.idToken);
+      localStorage.setItem("isLoggedIn", true);
     });
     builder.addCase(getUserProfileAction.fulfilled, (state, action) => {
       const response = action.payload;

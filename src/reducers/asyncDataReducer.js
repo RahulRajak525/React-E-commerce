@@ -33,9 +33,12 @@ export const getAlbumData = createAsyncThunk(
 
 export const addOrderHistoryAction = createAsyncThunk(
   "addOrderHistoryAction",
-  async (data) => {
-    console.log(data);
+  async (data,thunkAPI) => {
+    // console.log(data);
     const response = await apiDataService.postOrderHistoryData(data);
+    setTimeout(() => {
+      thunkAPI.dispatch(getOrderHistoryData(data.userLocalId))
+    },1000)
     return response;
   }
 );
